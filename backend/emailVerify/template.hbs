@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .verify-button {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .verify-button a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .verify-button a:hover {
+            transform: translateY(-2px);
+        }
+        .alternative-link {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .alternative-link p {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        .alternative-link code {
+            display: block;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #333333;
+            word-break: break-all;
+            margin-top: 5px;
+        }
+        .info-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .info-box p {
+            font-size: 14px;
+            color: #856404;
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer p {
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 10px;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✉️ Email Verification</h1>
+            <p>Secure your account in just one click</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p class="greeting">Hello <strong>{{name}}</strong>,</p>
+            
+            <p class="message">
+                Thank you for registering! We're excited to have you on board. 
+                To complete your registration and activate your account, please verify your email address.
+            </p>
+
+            <div class="verify-button">
+                <a href="http://localhost:3000/verify/{{token}}" target="_blank">Verify Email Address</a>
+            </div>
+
+            <div class="info-box">
+                <p>⏱️ <strong>Important:</strong> This verification link will expire in <strong>10 minutes</strong> for security purposes.</p>
+            </div>
+
+           
+
+            <p class="message" style="margin-top: 30px;">
+                If you didn't create an account with us, please ignore this email or contact our support team if you have concerns.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>This is an automated message, please do not reply to this email.</p>
+            <p>&copy; 2025 MERN Authentication. All rights reserved.</p>
+            <p style="margin-top: 15px; font-size: 12px;">
+                Need help? Contact us at <a href="mailto:riderknight6789@gmail.com" style="color: #667eea;">riderknight6789@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
